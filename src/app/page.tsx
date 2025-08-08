@@ -1,13 +1,8 @@
-import { Button } from "@/components/ui/button";
+import Homepage from "@/components/Homepage";
+import { FC } from "react";
 
+const Home: FC = () => {
+  return <Homepage />;
+};
 
-export default function Home() {
-  return (
-    
-    <div>
-      <h1>Homepage</h1>
-
-      <Button> Home </Button>
-    </div>
-  );
-}
+export default Home;
