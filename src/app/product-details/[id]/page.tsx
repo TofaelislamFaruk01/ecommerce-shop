@@ -1,7 +1,10 @@
 import EmptyPlaceholder from "@/components/EmptyPlaceholder";
 import ProductDetailsClient from "@/components/ProductDetailsClient";
 import { fetchProductById } from "@/lib/api-end-point/products";
-import { ProductDetailsPageProps } from "@/types";
+
+interface ProductDetailsPageProps {
+  params: Promise<{ id: string }>;
+}
 
 const ProductDetailsPage = async ({ params }: ProductDetailsPageProps) => {
   const awaitedParams = await params;

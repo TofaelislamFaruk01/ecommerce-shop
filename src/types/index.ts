@@ -17,12 +17,6 @@ export interface ProductCardProps {
   product: Product;
 }
 
-export interface ProductEditFormProps {
-  product: Product;
-  onSave: (updatedProduct: Product) => void;
-  onCancel: () => void;
-}
-
 export interface ProductFormProps {
   mode: ProductForm_Mode;
   product?: ProductFormInputs;
@@ -48,10 +42,6 @@ export type SkeletonLoaderProps = {
 
 export interface ProductListProps {
   initialProducts: Product[];
-}
-
-export interface ProductDetailsPageProps {
-  params: { id: string };
 }
 
 export interface ProductFormInputs {
