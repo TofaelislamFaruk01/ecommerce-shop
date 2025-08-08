@@ -1,36 +1,173 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛍️ E-Commerce Shop
 
-## Getting Started
+A modern, full-featured e-commerce application built with Next.js 15, TypeScript, and Redux Toolkit. This project showcases a complete online shopping experience with product browsing, favorites management, product creation, and a beautiful responsive design.
 
-First, run the development server:
+## 🌐 Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+**Live Application**: [https://ecommerce-shop-mvw7.vercel.app/](https://ecommerce-shop-mvw7.vercel.app/)
+
+## ✨ Features
+
+### 🎯 Core Functionality
+- **Product Browsing**: Browse products with pagination and search functionality
+- **Product Details**: Detailed product view with images, descriptions, and specifications
+- **Favorites System**: Add/remove products to favorites with persistent state management
+- **Product Management**: Create new products with a comprehensive form
+- **Responsive Design**: Mobile-first design that works seamlessly across all devices
+
+### 🎨 User Experience
+- **Dark/Light Theme**: Toggle between dark and light themes with persistent state
+- **Modern UI**: Beautiful, modern interface built with Tailwind CSS and Shadcn UI
+- **Loading States**: Skeleton loaders and smooth transitions for better UX
+- **Toast Notifications**: User-friendly notifications for actions and errors
+- **Accessibility**: Fully accessible components with proper ARIA labels
+
+### 🛠️ Technical Features
+- **TypeScript**: Full type safety throughout the application
+- **Redux Toolkit**: State management for favorites and theme
+- **Next.js 15**: Latest features with App Router and Turbopack
+- **API Integration**: RESTful API integration with Axios
+- **Form Handling**: React Hook Form 
+- **Image Optimization**: Next.js Image component for optimized images
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd ecommerce-shop
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   # or
+   bun install
+   ```
+
+3. **Set up environment variables**
+   Create a `.env.local` file in the root directory:
+   ```env
+   NEXT_PUBLIC_BASE_URL=https://dummyjson.com
+   ```
+
+4. **Run the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   ```
+
+5. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── layout.tsx         # Root layout with providers
+│   ├── page.tsx           # Homepage
+│   ├── globals.css        # Global styles
+│   ├── product-details/   # Product details pages
+│   ├── favorites/         # Favorites page
+│   └── create-product/    # Product creation page
+├── components/            # Reusable components
+│   ├── ui/               # Base UI components (Radix UI)
+│   ├── ProductCard.tsx   # Product card component
+│   ├── ProductList.tsx   # Product list component
+│   ├── Navbar.tsx        # Navigation component
+│   ├── Homepage.tsx      # Homepage component
+│   └── ...               # Other components
+├── redux/                # Redux store and slices
+│   ├── store.ts          # Redux store configuration
+│   ├── Provider.tsx      # Redux provider
+│   ├── favorites/        # Favorites slice
+│   └── themes/           # Theme slice
+├── types/                # TypeScript type definitions
+│   └── index.ts          # Main type definitions
+├── lib/                  # Utility functions and API
+│   ├── utils.ts          # Utility functions
+│   └── api-end-point/    # API endpoints
+├── hooks/                # Custom React hooks
+├── providers/            # Context providers
+└── enums/                # TypeScript enums
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Key Components
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Product Management
+- **ProductCard**: Displays product information with image, title, price, and rating
+- **ProductList**: Renders a grid of products with pagination
+- **ProductDetailsClient**: Detailed product view with full information
+- **ProductForm**: Form for creating and editing products
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### State Management
+- **Favorites Slice**: Manages favorite products with add/remove functionality
+- **Theme Slice**: Handles dark/light theme switching
+- **Redux Store**: Centralized state management
 
-## Learn More
+### UI Components
+- **Navbar**: Responsive navigation with mobile menu
+- **DarkModeToggle**: Theme switching component
+- **SkeletonLoader**: Loading states for better UX
+- **EmptyPlaceholder**: Empty state components
 
-To learn more about Next.js, take a look at the following resources:
+## 🔧 API Integration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The application integrates with the [DummyJSON API](https://dummyjson.com/) for product data:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **GET /products**: Fetch paginated products
+- **GET /products/search**: Search products by query
+- **GET /products/{id}**: Get product details
+- **POST /products/add**: Create new product
+- **PUT /products/{id}**: Update product
+- **DELETE /products/{id}**: Delete product
 
-## Deploy on Vercel
+## 🎨 Styling
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Tailwind CSS**: Utility-first CSS framework
+- **Shadcn UI**: Accessible component primitives
+components
+- **Dark Mode**: Full dark/light theme support
+- **Responsive Design**: Mobile-first approach
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## 🛠️ Development
+
+### Available Scripts
+
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+### Code Quality
+
+- **TypeScript**: Strict type checking enabled
+- **ESLint**: Code linting with Next.js configuration
+- **Prettier**: Code formatting (if configured)
+
+## 🙏 Acknowledgments
+
+- [Next.js](https://nextjs.org/) - React framework
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework
+- [Shadcn UI](https://ui.shadcn.com/) - UI primitives
+- [Redux Toolkit](https://redux-toolkit.js.org/) - State management
+- [DummyJSON](https://dummyjson.com/) - API for testing
+

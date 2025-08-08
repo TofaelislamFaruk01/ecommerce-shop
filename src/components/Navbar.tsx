@@ -24,7 +24,7 @@ const NavbarWrapper: FC = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-background shadow-sm">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
         <Link href="/" className="text-lg font-semibold">
-          eCommerce
+          ShopHub
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
