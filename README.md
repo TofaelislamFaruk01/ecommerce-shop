@@ -2,9 +2,11 @@
 
 A modern, full-featured e-commerce application built with Next.js 15, TypeScript, and Redux Toolkit. This project showcases a complete online shopping experience with product browsing, favorites management, product creation, and a beautiful responsive design.
 
-## 🌐 Live Demo
+## 🌐 Live Demo & Repository
 
-**Live Application**: [https://ecommerce-shop-mvw7.vercel.app/](https://ecommerce-shop-mvw7.vercel.app/)
+**Live Application**: [https://ecommerce-shop-mvw7.vercel.app/](https://ecommerce-shop-mvw7.vercel.app/)  
+**GitHub Repository**: [https://github.com/TofaelislamFaruk01/ecommerce-shop](https://github.com/TofaelislamFaruk01/ecommerce-shop)
+
 
 ## ✨ Features
 
@@ -41,8 +43,9 @@ A modern, full-featured e-commerce application built with Next.js 15, TypeScript
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/TofaelislamFaruk01/ecommerce-shop.git
    cd ecommerce-shop
+
    ```
 
 2. **Install dependencies**
@@ -88,12 +91,12 @@ src/
 │   ├── favorites/         # Favorites page
 │   └── create-product/    # Product creation page
 ├── components/            # Reusable components
-│   ├── ui/               # Base UI components (Radix UI)
+│   ├── ui/               # Base UI components (Shadcn UI)
 │   ├── ProductCard.tsx   # Product card component
 │   ├── ProductList.tsx   # Product list component
 │   ├── Navbar.tsx        # Navigation component
 │   ├── Homepage.tsx      # Homepage component
-│   └── ...               # Other components
+│   └── ...               # Other reusable components
 ├── redux/                # Redux store and slices
 │   ├── store.ts          # Redux store configuration
 │   ├── Provider.tsx      # Redux provider
@@ -128,16 +131,19 @@ src/
 - **SkeletonLoader**: Loading states for better UX
 - **EmptyPlaceholder**: Empty state components
 
-## 🔧 API Integration
+### 🔧 API Integration
 
-The application integrates with the [DummyJSON API](https://dummyjson.com/) for product data:
+This application uses the **[DummyJSON API](https://dummyjson.com/)** to manage product data.
 
-- **GET /products**: Fetch paginated products
-- **GET /products/search**: Search products by query
-- **GET /products/{id}**: Get product details
-- **POST /products/add**: Create new product
-- **PUT /products/{id}**: Update product
-- **DELETE /products/{id}**: Delete product
+**Endpoints used:**
+
+- `GET /products` – Fetch a paginated list of products  
+- `GET /products/search` – Search products by query  
+- `GET /products/{id}` – Fetch product details by ID  
+- `POST /products/add` – Create a new product  
+- `PUT /products/{id}` – Update an existing product  
+- `DELETE /products/{id}` – Delete a product  
+
 
 ## 🎨 Styling
 
